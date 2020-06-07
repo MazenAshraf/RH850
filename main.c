@@ -1,37 +1,24 @@
 #include <stdio.h>
 #include"std_types.h"
 #include"common_macros.h"
-#include"RH850.h"
 #include"timer.h"
-//void change();
-uint8 Timer_init(void)
+void main(void)
 {
-	SET_BIT(Start_Timer,0);
+	Timer_init();  //to initiate timer
+	Set_Value();
+	Counter_Mode(); //Interval Timer Mode
+	Interrupt_Type(); //INT when counting starts are enabled
+	if(Initial_Value == 0x00000000)
+	{
+		Timer_stop();
+		Level_Of_Output();
+		Mode_Of_OSTMnTTOUT();
+	}
 
-}
-uint8 Timer_stop(void)
-{
-	SET_BIT(Stop_Timer,0);
-}
-uint8 Set_Value(void)
-{
-	Initial_Value = 0xFFFFFFFF;
-
-}
-uint8 Interrupt_Type(void)
-{
-	SET_BIT(Int_Operation_Types,0);
-}
-uint8 Counter_Mode(void)
-{
-	SET_BIT(Int_Operation_Types,1);
-
-}
-
-int main(void)
-{
 	while(1)
 	{
+
+
 
 	}
 }
