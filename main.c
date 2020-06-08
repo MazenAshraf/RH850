@@ -2,6 +2,7 @@
 #include"std_types.h"
 #include"common_macros.h"
 #include"timer.h"
+#include"Interrupt.h"
 void main(void)
 {
 	Timer_init();  //to initiate timer
