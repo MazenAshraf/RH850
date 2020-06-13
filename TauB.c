@@ -5,9 +5,15 @@
  *      Author: Aya
  */
 
-#include "Rh850.h"
+#include "TauB.h"
 #include "Common_Macros.h"
 #include "std_types.h"
+/*****************************************************************************
+** Function:    Register_Defined
+** Description: Initializes the Registers addresses
+** Parameter:   None
+** Return:      None
+******************************************************************************/
 
 void TAUB_init(void)
 {
